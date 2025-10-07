@@ -1,0 +1,18 @@
+body {
+    margin: 0rem;
+}
+
+ .offcanvas-body {
+    padding: 0rem !important;
+    padding-left: 16px !important;
+ }
+
+ img {
+    height: 3rem;
+ }
+
+ /* Hero Image code */
+
+ .hero-coolpic {
+    height: 5rem;
+ }
