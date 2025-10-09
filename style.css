@@ -11,6 +11,24 @@ body {
     height: 3rem;
  }
 
+.navbar-toggler {
+  background-color: #0e2d42ff !important; /* Navy background */
+  border-color: #0e2d42ff !important;
+  color: white !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1) brightness(200%) contrast(150%); /* Makes the icon white */
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
 
  /* HERO */
  /* ================================================================================== */
@@ -33,14 +51,15 @@ body {
   /* Brings the hero text down and centers it */
   .hero-quote {
     text-align: center;
-    padding-top: 10rem;
+    padding-top: 7rem;
   }
 
   /* Makes the text in the middle of the hero bigger  */
   .hero-quote h1 {
     font-size: 5rem;
     color: white;
-    padding-bottom: 1rem;
+    font-family: "BBH Sans Bogle", sans-serif;
+
   }
 
   /* Text below the big letters on the hero */
@@ -50,7 +69,8 @@ body {
 
   .hero-description p {
     color: white;
-    font-size: 1.7rem;
+    font-size: 2rem;
+    font-family: "Outfit", sans-serif;
   }
 
   /*The hero button below al the text  */
@@ -62,13 +82,29 @@ body {
 
 
   .hero-btn {
-    text-align: center;
-    background-color: orange;
-    color: white;
-    border: 1px solid orange;
-    font-size: 1.5rem;
-    border-radius: 25px;
-  }
+  background: linear-gradient(135deg, #f08740ff, #ffb74d);
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 0.8rem 2.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #ffa726, #ffa724);
+  box-shadow: 0 8px 25px rgba(255, 152, 0, 0.6);
+}
+
+.hero-btn:active {
+  transform: scale(0.6);
+  box-shadow: 0 3px 10px rgba(255, 152, 0, 0.3);
+}
+
 
 
 
@@ -86,6 +122,25 @@ body {
 
     .hero-quote h1 {
         font-size: 2.6rem;
-    }
-    
+    }  
+  }
+
+
+  /* =============================================== */
+  /* Create why chose us section  */
+
+  .chose-us {
+    background-color: white;
+    padding-bottom: 20rem;
+  }
+
+  .us-title {
+    text-align: center;
+    padding-top: 5rem;
+    font-family: "BBH Sans Bogle", sans-serif;
+    color: rgb(86, 82, 82);
+  }
+
+  .us-title h2 {
+    font-size: 4rem;
   }
