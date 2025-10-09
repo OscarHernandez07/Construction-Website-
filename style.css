@@ -11,8 +11,81 @@ body {
     height: 3rem;
  }
 
- /* Hero Image code */
 
- .hero-coolpic {
-    height: 5rem;
- }
+ /* HERO */
+ /* ================================================================================== */
+ /* This makes the website be responsive on all desktop devices */
+ /* Hero Image code */
+ .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/home-remodeling.avif");
+  
+    /* Set a specific height */
+    height: 36rem;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Brings the hero text down and centers it */
+  .hero-quote {
+    text-align: center;
+    padding-top: 10rem;
+  }
+
+  /* Makes the text in the middle of the hero bigger  */
+  .hero-quote h1 {
+    font-size: 5rem;
+    color: white;
+    padding-bottom: 1rem;
+  }
+
+  /* Text below the big letters on the hero */
+  .hero-description {
+    text-align: center;
+  }
+
+  .hero-description p {
+    color: white;
+    font-size: 1.7rem;
+  }
+
+  /*The hero button below al the text  */
+
+  .hero-btn-outerDiv {
+    text-align: center;
+    padding-top: 1.5rem;
+  }
+
+
+  .hero-btn {
+    text-align: center;
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    font-size: 1.5rem;
+    border-radius: 25px;
+  }
+
+
+
+  /* MOBILE */
+  /* ==== This section creates the smaller devices responsive so it looks good ====*/
+  @media (max-width: 800px) {
+    .hero-image {
+        width: fit-content;
+    }
+
+    .hero-quote {
+        text-align: center;
+        
+    }
+
+    .hero-quote h1 {
+        font-size: 2.6rem;
+    }
+    
+  }
