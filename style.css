@@ -125,22 +125,100 @@ body {
     }  
   }
 
+/* =============================================== */
+/* Why Choose Us Section */
 
-  /* =============================================== */
-  /* Create why chose us section  */
-
-  .chose-us {
+.chose-us {
     background-color: white;
-    padding-bottom: 20rem;
-  }
-
-  .us-title {
+    padding: 6rem 2rem;
     text-align: center;
-    padding-top: 5rem;
+  }
+  
+  .us-title {
     font-family: "BBH Sans Bogle", sans-serif;
     color: rgb(86, 82, 82);
   }
-
+  
   .us-title h2 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
+  
+  .us-description {
+    font-size: 1.3rem;
+    font-family: "Outfit", sans-serif;
+    color: #333;
+    max-width: 700px;
+    margin: 2rem auto 0;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  .line-divider-whyUs {
+    border: 2px solid #f08740ff;
+    width: 10rem;
+    margin: 1rem auto 3rem;
+  }
+  
+  /* Container for the 3 cards */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual card */
+  .about-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 2.5rem 2rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  .icon {
+    font-size: 4rem;
+    color: #f08740ff;
+    margin-bottom: 1rem;
+  }
+  
+  .about-card h3 {
+    color: #0e2d42ff;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .about-card p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-card {
+      max-width: 90%;
+    }
+  
+    .us-title h2 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  
