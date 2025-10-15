@@ -112,7 +112,8 @@ body {
   /* ==== This section creates the smaller devices responsive so it looks good ====*/
   @media (max-width: 800px) {
     .hero-image {
-        width: fit-content;
+        width: 100%;
+        height: 30rem;
     }
 
     .hero-quote {
@@ -121,8 +122,14 @@ body {
     }
 
     .hero-quote h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }  
+
+    .hero-description p {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+}
+
   }
 
 /* =============================================== */
@@ -317,142 +324,255 @@ body {
 
 
 /* Footer for the website */
-/* Footer for the website */
-.site-footer {
-  background-color: #0e2d42ff;
-  color: #ffffff;
-  padding: 4rem 2rem 2rem;
-  font-family: 'Outfit', sans-serif;
+/* Base styles */
+.footer {
+  background: #0e2d42ff;
+  color: #fff;
+  padding: 3rem 1.5rem 2rem;
+  
 }
 
-.footer-container {
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font: 1rem sans-serif;
+
+}
+
+/* LOGO SECTION */
+.footer-logo-section {
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logo-section p {
+  color: #cfd8e3;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0.5rem auto 0;
+}
+
+.socials {
+  margin-top: 1rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10rem;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 0.6rem;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #ffffff;
+}
+
+/* LINKS + CONTACT */
+.footer-links {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.8rem;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width:800px) {
+  .footer-contact {
+  text-align: left;
+}
+}
+
+.footer-links li,
+.footer-contact li {
+  margin: 0.5rem 0;
+  color: #cfd8e3;
+  font-size: 1rem;
+}
+
+.footer-links a {
+  color: #cfd8e3;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-contact i {
+  margin-right: 0.5rem;
+  color: #ffffff;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #9fb3c8;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (min-width: 700px) {
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+
+  .footer-logo-section {
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+}
+
+
+
+
+
+/* === OUR WORK SECTION === */
+.our-work {
+  background-color: #f5f6f7;
+  padding: 5rem 2rem;
+  font-family: 'Outfit', sans-serif;
+  color: #0d1b2a;
+}
+
+.work-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.work-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0d1b2a;
+}
+
+.work-header p {
+  font-size: 1rem;
+  color: #5a6b7b;
+  line-height: 1.6;
+}
+
+/* === WORK GALLERY GRID === */
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.footer-about,
-.footer-links,
-.footer-contact {
-  flex: 1 1 250px;
+.work-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer-about h3 {
-  font-family: "BBH Sans Bogle", sans-serif;
-  font-size: 1.8rem;
-  color: #f08740ff;
-  margin-bottom: 1rem;
+.work-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
-.footer-about {
-  margin-right: 3rem; /* space between about and links */
+.work-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.4s ease;
 }
 
-.footer-about p {
-  line-height: 1.6;
+.work-item:hover img {
+  transform: scale(1.05);
 }
 
-.footer-links h4,
-.footer-contact h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #f08740ff;
+.work-info {
+  padding: 1.2rem 1rem 1.5rem;
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  margin-bottom: 0.8rem;
-}
-
-.footer-links ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-  color: #f08740ff;
-}
-
-.footer-contact p {
-  margin: 0.5rem 0;
-}
-
-.footer-social {
-  margin-top: 1rem;
-}
-
-.footer-social a {
-  color: #ffffff;
-  margin-right: 1rem;
+.work-info h3 {
   font-size: 1.2rem;
-  transition: color 0.3s;
+  color: #0d1b2a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.footer-social a:hover {
-  color: #f08740ff;
+.work-info p {
+  font-size: 0.95rem;
+  color: #5a6b7b;
+  line-height: 1.5;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 1rem;
-  color: #ccc;
-}
-
-/* ===== Responsive Styles ===== */
-
-/* Tablets */
-@media (max-width: 992px) {
-  .footer-container {
-    gap: 5rem;
-  }
-  .footer-about {
-    margin-right: 2rem;
-  }
-}
-
-/* Small tablets / large phones */
+/* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 2rem;
+  .our-work {
+    padding: 4rem 1.5rem;
   }
-  .footer-about {
-    margin-right: 0;
-    
-  }
-  .footer-links, .footer-contact {
-    margin-top: 2rem;
-  }
-}
 
-/* Mobile devices */
-@media (max-width: 480px) {
-  .footer-about h3 {
-    font-size: 1.5rem;
+  .work-header h2 {
+    font-size: 1.8rem;
   }
-  .footer-links h4,
-  .footer-contact h4 {
-    font-size: 1.1rem;
-  }
-  .footer-links ul li a {
+
+  .work-header p {
     font-size: 0.95rem;
   }
-  .footer-social a {
-    font-size: 1rem;
-    margin-right: 0.8rem;
+
+  .work-item img {
+    height: 200px;
   }
-  .site-footer {
-    padding: 3rem 1rem 2rem;
+
+  .work-info h3 {
+    font-size: 1.1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .our-work {
+    padding: 3rem 1rem;
+  }
+
+  .work-item img {
+    height: 180px;
+  }
+
+  .work-info p {
+    font-size: 0.9rem;
+  }
+}
+
