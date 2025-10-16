@@ -460,119 +460,171 @@ body {
 
 
 /* === OUR WORK SECTION === */
+/* === OUR WORK SECTION === */
 .our-work {
-  background-color: #f5f6f7;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   padding: 5rem 2rem;
   font-family: 'Outfit', sans-serif;
   color: #0d1b2a;
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .work-header {
-  text-align: center;
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
 }
 
 .work-header h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 3rem;
+ 
   margin-bottom: 1rem;
-  color: #0d1b2a;
+  color: #565252;
+  position: relative;
+  display: inline-block;
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+
+.work-header h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60%;
+  margin: 0.5rem auto 0;
+  background: #f08740ff;;
+  border-radius: 5px;
 }
 
 .work-header p {
-  font-size: 1rem;
-  color: #5a6b7b;
+  font-size: 1.2rem;
+  color: #000000;
   line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+  font-family: "Outfit", sans-serif;
 }
 
-/* === WORK GALLERY GRID === */
+/* === GALLERY GRID === */
 .work-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1rem; /* smaller gap */
+  justify-items: stretch;
+  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.work-item {
+/* Force exactly 3 columns on desktops */
+@media (min-width: 992px) {
+  .work-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem; /* small tight gap */
+  }
+}
+
+/* Adjust for tablets */
+@media (max-width: 991px) and (min-width: 601px) {
+  .work-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+/* Stack on mobile */
+@media (max-width: 600px) {
+  .work-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
+/* === CARD DESIGN === */
+.work-card {
   position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-}
-
-.work-item img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  transition: transform 0.4s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin: 0;
 }
 
-.work-item:hover img {
+.work-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.work-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.work-card:hover img {
   transform: scale(1.05);
 }
 
-.work-info {
-  padding: 1.2rem 1rem 1.5rem;
+/* === OVERLAY EFFECT === */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  padding: 1.2rem;
+  background: linear-gradient(to top, rgba(13, 27, 42, 0.9), rgba(13, 27, 42, 0.3));
+  color: #fff;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.work-info h3 {
+.work-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-overlay h4 {
+  margin: 0 0 0.3rem;
   font-size: 1.2rem;
-  color: #0d1b2a;
-  margin-bottom: 0.5rem;
   font-weight: 600;
+  color: #f08740ff;;
 }
 
-.work-info p {
-  font-size: 0.95rem;
-  color: #5a6b7b;
-  line-height: 1.5;
+.card-overlay p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #f0f0f0;
 }
 
-/* === RESPONSIVE DESIGN === */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .our-work {
-    padding: 4rem 1.5rem;
-  }
-
   .work-header h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .work-header p {
     font-size: 0.95rem;
   }
 
-  .work-item img {
+  .work-card img {
     height: 200px;
-  }
-
-  .work-info h3 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .our-work {
-    padding: 3rem 1rem;
-  }
-
-  .work-item img {
-    height: 180px;
-  }
-
-  .work-info p {
-    font-size: 0.9rem;
   }
 }
 

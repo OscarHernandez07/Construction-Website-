@@ -44,7 +44,7 @@
               </div>
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item"><a class="nav-link active" style="color: white;" href="#"> Home</a></li>
+                  <li class="nav-item"><a class="nav-link active" style="color: white;" href="index.html"> Home</a></li>
                   <li class="nav-item"><a class="nav-link" style="color: white;" href="index.html#about-us">About Us</a></li>
                   <li class="nav-item"><a class="nav-link" style="color: white;" href="index.html#reviews">Reviews</a></li>
                   <li class="nav-item"><a class="nav-link" style="color: white;" href="projects.html">Projects</a></li>
@@ -61,70 +61,77 @@
       <!-- OUR WORK SECTION -->
 <section class="our-work" id="our-work">
   <div class="work-header">
-    <h2>Our Work</h2>
-    <p>From home renovations to complete remodels, RK Construction takes pride in every detail. Our projects reflect craftsmanship, reliability, and lasting quality — built to exceed expectations.</p>
+    <h2>Our Work Speaks for Itself</h2>
+    <p>We bring your vision to life — from renovations to new builds, see the transformations we've created.</p>
   </div>
 
   <div class="work-gallery">
-    <div class="work-item">
-      <img src="images/work.jpeg" alt="Modern Kitchen Remodel">
-      <div class="work-info">
-        <h3>Modern Kitchen Remodel</h3>
-        <p>A full kitchen transformation featuring new cabinetry, lighting, and premium finishes designed for everyday comfort and style.</p>
+    <div class="work-card">
+      <img src="images/work.jpeg" alt="Kitchen Remodel">
+      <div class="card-overlay">
+        <h4>Kitchen Remodel</h4>
+        <p>Modern cabinets, countertops, and lighting upgrades that transform your space.</p>
       </div>
     </div>
 
-    <div class="work-item">
-      <img src="images/work.jpeg" alt="Bathroom Renovation">
-      <div class="work-info">
-        <h3>Bathroom Renovation</h3>
-        <p>Elegant tile work, modern fixtures, and a sleek new layout that turns a simple space into a personal retreat.</p>
+    <div class="work-card">
+      <img src="images/work2.jpeg" alt="Bathroom Upgrade">
+      <div class="card-overlay">
+        <h4>Bathroom Upgrade</h4>
+        <p>Stylish fixtures, tiles, and storage solutions that maximize comfort and function.</p>
       </div>
     </div>
 
-    <div class="work-item">
-      <img src="images/work.jpeg" alt="Deck Addition">
-      <div class="work-info">
-        <h3>Deck & Outdoor Addition</h3>
-        <p>Expanding outdoor living spaces with durable materials and custom finishes built for relaxation and gatherings.</p>
+    <div class="work-card">
+      <img src="images/work3.jpeg" alt="Outdoor Deck">
+      <div class="card-overlay">
+        <h4>Outdoor Deck</h4>
+        <p>Custom woodwork and lighting make your outdoor space perfect for relaxation.</p>
       </div>
     </div>
 
-    <div class="work-item">
-      <img src="images/work.jpeg" alt="Home Extension Project">
-      <div class="work-info">
-        <h3>Home Extension</h3>
-        <p>Adding space and value with seamless design that matches the existing home’s character and structure.</p>
+    <div class="work-card">
+      <img src="https://images.unsplash.com/photo-1580584121054-9c2f2a50ef41?crop=entropy&cs=tinysrgb&fit=max&h=250&w=400" alt="Living Room">
+      <div class="card-overlay">
+        <h4>Living Room</h4>
+        <p>Open layout and modern finishes give your living room a fresh new look.</p>
       </div>
     </div>
 
-    <div class="work-item">
-      <img src="images/work.jpeg" alt="Home Extension Project">
-      <div class="work-info">
-        <h3>Home Extension</h3>
-        <p>Adding space and value with seamless design that matches the existing home’s character and structure.</p>
+    <div class="work-card">
+      <img src="https://images.unsplash.com/photo-1572120360610-d971b9b1f1b5?crop=entropy&cs=tinysrgb&fit=max&h=250&w=400" alt="Bedroom Makeover">
+      <div class="card-overlay">
+        <h4>Bedroom Makeover</h4>
+        <p>Cozy lighting, fresh paint, and modern furniture for the perfect retreat.</p>
       </div>
     </div>
 
-    <div class="work-item">
-      <img src="images/work.jpeg" alt="Home Extension Project">
-      <div class="work-info">
-        <h3>Home Extension</h3>
-        <p>Adding space and value with seamless design that matches the existing home’s character and structure.</p>
+    <div class="work-card">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?crop=entropy&cs=tinysrgb&fit=max&h=250&w=400" alt="Office Redesign">
+      <div class="card-overlay">
+        <h4>Office Redesign</h4>
+        <p>Home office makeover for productivity with ergonomic furniture and smart storage.</p>
       </div>
     </div>
   </div>
 </section>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".work-card");
 
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
 
-
-
-
-
-
-
-
+  cards.forEach(card => observer.observe(card));
+});
+</script>
 
 
 
