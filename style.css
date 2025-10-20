@@ -460,7 +460,6 @@ body {
 
 
 /* === OUR WORK SECTION === */
-/* === OUR WORK SECTION === */
 .our-work {
   background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   padding: 5rem 2rem;
@@ -489,9 +488,9 @@ body {
   content: "";
   display: block;
   height: 3px;
-  width: 60%;
-  margin: 0.5rem auto 0;
-  background: #f08740ff;;
+  width: 5rem;
+  margin: 1rem auto 0;
+  background: #f08740ff;
   border-radius: 5px;
 }
 
@@ -502,6 +501,16 @@ body {
   margin: 0 auto;
   max-width: 700px;
   font-family: "Outfit", sans-serif;
+}
+
+.work-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  text-align: left;
 }
 
 /* === GALLERY GRID === */
@@ -572,47 +581,6 @@ body {
   display: block;
 }
 
-.work-card:hover img {
-  transform: scale(1.05);
-}
-
-/* === OVERLAY EFFECT === */
-.card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 45%;
-  padding: 1.2rem;
-  background: linear-gradient(to top, rgba(13, 27, 42, 0.9), rgba(13, 27, 42, 0.3));
-  color: #fff;
-  opacity: 0;
-  transform: translateY(25px);
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.work-card:hover .card-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card-overlay h4 {
-  margin: 0 0 0.3rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #f08740ff;;
-}
-
-.card-overlay p {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin: 0;
-  color: #f0f0f0;
-}
-
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .work-header h2 {
@@ -628,3 +596,115 @@ body {
   }
 }
 
+
+
+
+/* Booking section  */
+
+.contact-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 3rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: "BBH Sans Bogle", sans-serif;
+  color: rgb(86, 82, 82);
+  font-size: 3rem;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 2rem;
+}
+
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+@media(max-width:768px) {
+  .contact-form {
+    padding-top: 0px;
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #f08740ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: rgb(247, 108, 15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container h2 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+
+.line-divider-contact {
+  border: 2px solid #f08740ff;
+  width: 6rem;
+  margin: 1rem auto 1rem;
+}
+
+
+.us-title {
+  font-family: "BBH Sans Bogle", sans-serif;
+  color: rgb(86, 82, 82);
+}
+
+.us-title h2 {
+  font-size: 3rem;
+}
