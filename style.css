@@ -11,6 +11,21 @@ body {
     height: 3rem;
  }
 
+ .container-fluid a {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+ }
+
+ .navbar-brand {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  padding-left: 3rem;
+ }
+
 .navbar-toggler {
   background-color: #0e2d42ff !important; /* Navy background */
   border-color: #0e2d42ff !important;
@@ -28,7 +43,6 @@ body {
 .navbar .nav-link:hover {
   color: white !important;
 }
-
 
  /* HERO */
  /* ================================================================================== */
@@ -59,7 +73,6 @@ body {
     font-size: 5rem;
     color: white;
     font-family: "BBH Sans Bogle", sans-serif;
-
   }
 
   /* Text below the big letters on the hero */
@@ -80,7 +93,6 @@ body {
     padding-top: 1.5rem;
   }
 
-
   .hero-btn {
   background: linear-gradient(135deg, #f08740ff, #ffb74d);
   color: white;
@@ -93,6 +105,7 @@ body {
   box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .hero-btn:hover {
@@ -104,9 +117,6 @@ body {
   transform: scale(0.6);
   box-shadow: 0 3px 10px rgba(255, 152, 0, 0.3);
 }
-
-
-
 
   /* MOBILE */
   /* ==== This section creates the smaller devices responsive so it looks good ====*/
@@ -128,8 +138,7 @@ body {
     .hero-description p {
         font-size: 1.3rem;
         padding: 0 1rem;
-}
-
+    }
   }
 
 /* =============================================== */
@@ -227,9 +236,8 @@ body {
       font-size: 2.2rem;
     }
   }
-  
 
-  /* Code about the reviews */
+  /* --------------Code about the reviews ----------------*/
   .reviews-header {
   background: linear-gradient(120deg, #f0f0f0, #ffffff);
   padding: 6rem 2rem;
@@ -321,15 +329,12 @@ body {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-
-
-/* Footer for the website */
+/* ------------------Footer for the website------------------ */
 /* Base styles */
 .footer {
   background: #0e2d42ff;
   color: #fff;
   padding: 3rem 1.5rem 2rem;
-  
 }
 
 .footer-content {
@@ -341,7 +346,6 @@ body {
   text-align: center;
   font-family: "Outfit", sans-serif;
   font: 1rem sans-serif;
-
 }
 
 /* LOGO SECTION */
@@ -455,11 +459,7 @@ body {
   }
 }
 
-
-
-
-
-/* === OUR WORK SECTION === */
+/* ------------ OUR WORK SECTION ---------------- */
 .our-work {
   background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
   padding: 5rem 2rem;
@@ -584,7 +584,7 @@ body {
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .work-header h2 {
-    font-size: 2rem;
+    font-size: 40px;
   }
 
   .work-header p {
@@ -596,10 +596,7 @@ body {
   }
 }
 
-
-
-
-/* Booking section  */
+/* ---------------Booking section------------------ */
 
 .contact-section {
   background: #ffffff;
@@ -643,9 +640,8 @@ body {
 
 .contact-form {
   background: #fff;
-  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  
 }
 
 @media(max-width:768px) {
@@ -684,7 +680,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .contact-container h2 {
-    font-size: 2rem;
+    font-size: 44px;
+    padding-top: 3rem;
   }
 
   .subtitle {
@@ -692,13 +689,11 @@ body {
   }
 }
 
-
 .line-divider-contact {
   border: 2px solid #f08740ff;
   width: 6rem;
   margin: 1rem auto 1rem;
 }
-
 
 .us-title {
   font-family: "BBH Sans Bogle", sans-serif;
@@ -707,4 +702,42 @@ body {
 
 .us-title h2 {
   font-size: 3rem;
+}
+
+@media(max-width: 800px) {
+  .contact-wrapper {
+    width: 100%;
+  }
+}
+
+.searchbar {
+  border-radius: 13px;
+  margin-top: 10px;
+  text-align: start;
+  width: 13rem;
+  border: 1px solid black;
+  height: 2rem;
+  margin-left: 1rem;
+  
+}
+
+.search-btn {
+  background-color: #0e2d42; /* Deep blue */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 3px;
+}
+
+.search-btn i {
+  font-size: 16px;
+}
+
+.search-btn:hover {
+  background-color: #143e54;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
