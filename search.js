@@ -1,1 +1,10 @@
-fetch("/data/data.json").then(res => res.json()).then(data)
+fetch("data/data.json")
+.then(response => response.json())
+.then(data =>{
+    
+    console.log(data)
+})
+
+.catch(error => console.error("Error:", error))
+
+
