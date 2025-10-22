@@ -26,6 +26,12 @@ body {
   padding-left: 3rem;
  }
 
+@media (max-width: 800px) {
+  .navbar-brand {
+    padding: 0;
+  }
+}
+
 .navbar-toggler {
   background-color: #0e2d42ff !important; /* Navy background */
   border-color: #0e2d42ff !important;
@@ -575,7 +581,7 @@ body {
 
 .work-card img {
   width: 100%;
-  height: 240px;
+  height: 440px;
   object-fit: cover;
   transition: transform 0.5s ease;
   display: block;
@@ -596,6 +602,63 @@ body {
   }
 }
 
+
+/* === OVERLAY === */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 45, 66, 0.85);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 1rem;
+}
+
+.card-overlay h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.work-card:hover img {
+  transform: scale(1.05);
+}
+
+.work-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .work-header h2 {
+    font-size: 2rem;
+  }
+
+  .work-header p {
+    font-size: 0.9rem;
+  }
+
+  .work-card img {
+    height: 220px;
+  }
+
+  .card-overlay h4 {
+    font-size: 1.1rem;
+  }
+
+  .card-overlay p {
+    font-size: 0.85rem;
+  }
+}
 /* ---------------Booking section------------------ */
 
 .contact-section {
@@ -718,6 +781,15 @@ body {
   border: 1px solid black;
   height: 2rem;
   margin-left: 1rem;
+}
+
+@media (max-width: 800px) {
+
+
+  .searchbar{
+    margin: 0;
+  }
+  
   
 }
 

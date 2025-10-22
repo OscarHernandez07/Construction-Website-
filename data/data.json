@@ -1,11 +1,27 @@
 [
-    {
-        "name": "about us",
-        "url": "/index.html#about-us"
-    },
-
-    {
-        "name": "reviews",
-        "url": "/index.html#reviews"
-    }
+  {
+    "name": "home",
+    "url": "/index.html",
+    "keywords": ["home", "main", "start", "welcome", "rk construction", "rk"]
+  },
+  {
+    "name": "about us",
+    "url": "/index.html#about-us",
+    "keywords": ["about", "team", "who we are", "owners", "renato", "keila", "why choose us", "company info", "construction team"]
+  },
+  {
+    "name": "reviews",
+    "url": "/index.html#reviews",
+    "keywords": ["reviews", "clients", "testimonials", "feedback", "ratings", "opinions", "satisfied customers", "customer stories"]
+  },
+  {
+    "name": "projects",
+    "url": "/projects.html",
+    "keywords": ["projects", "work", "portfolio", "remodel", "construction", "examples", "gallery", "previous jobs", "home renovation"]
+  },
+  {
+    "name": "contact",
+    "url": "/contact.html",
+    "keywords": ["contact", "call", "email", "phone", "support", "reach us", "address", "message", "get in touch"]
+  }
 ]
