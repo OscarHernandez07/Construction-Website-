@@ -4,33 +4,37 @@ const input = document.querySelector(".searchbar");
 let pages = [];
 
 fetch("data/data.json")
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     pages = data;
-    console.log("Search data loaded:", pages);
   })
-  .catch(err => console.error("Error loading JSON:", err));
+  .catch(err => console.log("Error loading data:", err));
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+form.addEventListener("submit", e => {
+  e.preventDefault();
 
-  const query = input.value.trim().toLowerCase();
-  if (!query) return;
+  const text = input.value.toLowerCase().trim();
+  if (text === "") return;
 
-  // Find the best match based on keywords or name
-  const match = pages.find(page => {
-    // Check both the main name and all its keywords
-    return (
-      page.name.toLowerCase().includes(query) ||
-      page.keywords.some(keyword => keyword.toLowerCase().includes(query))
-    );
-  });
+  let found = null;
 
-  if (match) {
-    window.location.href = match.url;
+  for (let i = 0; i < pages.length; i++) {
+    let p = pages[i];
+    if (
+      p.name.toLowerCase().includes(text) ||
+      p.keywords.some(k => k.toLowerCase().includes(text))
+    ) {
+      found = p;
+      break;
+    }
+  }
+
+  if (found) {
+    window.location.href = found.url;
   } else {
-    alert("No matching section found. Try keywords like 'about', 'projects', 'contact', etc.");
+    alert("Nothing found. Try words like 'about', 'projects', or 'contact'.");
   }
 
   input.value = "";
 });
+
